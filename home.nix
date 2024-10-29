@@ -2,8 +2,12 @@
 {
   home = {
     packages = with pkgs; [
-      hello
+      #hello
       fastfetch
+      dropbox
+      alacritty
+      vscode
+      gedit
     ];
 
     username = "theunconcernedape";
