@@ -6,8 +6,8 @@
       fastfetch
     ];
 
-    username = "svnu";
-    homeDirectory = "/home/svnu";
+    username = "theunconcernedape";
+    homeDirectory = "/home/theunconcernedape";
 
     # you do not need to change this if you're reading this in the future.
     # don't ever change this after the first build.  don't ask questions.
