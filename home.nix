@@ -3,11 +3,15 @@
   home = {
     packages = with pkgs; [
       #hello
-      fastfetch
-      dropbox
       alacritty
-      vscode
+      dropbox
+      fastfetch
       gedit
+      gimp
+      qbittorrent
+      tea
+      tor-browser
+      vscode
     ];
 
     username = "theunconcernedape";
