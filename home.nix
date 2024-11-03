@@ -1,10 +1,11 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, unstable, ... }:
 {
   home = {
     packages = with pkgs; [
       #hello
       alacritty
-      dropbox
+      # unstable.dropbox
+      # dropbox
       fastfetch
       gedit
       gimp
@@ -12,6 +13,8 @@
       tea
       tor-browser
       vscode
+      # unstable
+      (unstable.dropbox)
     ];
 
     username = "theunconcernedape";
