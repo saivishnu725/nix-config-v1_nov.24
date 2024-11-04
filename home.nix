@@ -10,6 +10,7 @@
       gedit
       gimp
       qbittorrent
+      spotify
       tea
       tor-browser
       vscode
