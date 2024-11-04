@@ -1,11 +1,10 @@
-{ lib, pkgs, unstable, ... }:
-{
+{ lib, pkgs, unstable, ... }: let
+  username = "theunconcernedape";
+in {
   home = {
     packages = with pkgs; [
       #hello
       alacritty
-      # unstable.dropbox
-      # dropbox
       fastfetch
       gedit
       gimp
@@ -18,8 +17,10 @@
       (unstable.dropbox)
     ];
 
-    username = "theunconcernedape";
-    homeDirectory = "/home/theunconcernedape";
+    # username = "myusername";
+    # replaced the above with the variable on line 2 and below:
+    inherit username;
+    homeDirectory = "/home/${username}";
 
     # you do not need to change this if you're reading this in the future.
     # don't ever change this after the first build.  don't ask questions.
