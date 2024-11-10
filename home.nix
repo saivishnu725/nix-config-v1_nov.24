@@ -14,7 +14,8 @@ in {
       fastfetch
       firefox
       gedit
-      gimp
+      gh
+      #gimp
       qbittorrent
       #spotify
       tea
