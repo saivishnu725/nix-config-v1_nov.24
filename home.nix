@@ -39,15 +39,18 @@ in {
   }; # home
   
   # shell
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
+  #programs.zsh = {
+  #  enable = true;
+  #  enableCompletion = true;
+  #  autosuggestion.enable = true;
+  #  syntaxHighlighting.enable = true;
 
-    shellAliases = {
-      ll = "ls -l";
-      la = "ls -laH";
-    };
-  };
+  #  shellAliases = {
+  #    ll = "ls -l";
+  #    la = "ls -laH";
+  #  };
+  #};
+  
+  # zsh
+  imports = [ ./modules/zsh/zsh.nix ];
 }
