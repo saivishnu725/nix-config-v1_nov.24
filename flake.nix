@@ -10,7 +10,7 @@
     nixpkgs-unstable.url = "nixpkgs/nixpkgs-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-24.05";
-      inputs.nipkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     }; # home-manager
   }; # inputs
 
