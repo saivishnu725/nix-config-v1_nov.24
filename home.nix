@@ -18,9 +18,9 @@ in {
       #gimp
       qbittorrent
       #spotify
-      tea
       tor-browser
       vscode
+      xclip
       zsh
       # unstable
       (unstable.dropbox)
