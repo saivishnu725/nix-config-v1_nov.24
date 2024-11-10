@@ -1,6 +1,6 @@
 .PHONY: update
 update:
-	home-manager switch --flake .#theunconcernedape
+	home-manager switch --flake .#currentuser
 
 .PHONY: clean
 clean:

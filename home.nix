@@ -1,14 +1,13 @@
 { lib, pkgs, unstable, ... }:
 let
-  username = "theunconcernedape";
+  username = import ./username.nix; # dynamically import the username
 in {
-  home = {
 
-    #description = "The Unconcerned Ape";
+  home = {
 
     packages = with pkgs; [
       #hello
-      alacritty
+      #alacritty
       (discord.override {
         withVencord = true;
       })
@@ -17,7 +16,7 @@ in {
       gedit
       gimp
       qbittorrent
-      spotify
+      #spotify
       tea
       tor-browser
       vscode
@@ -31,11 +30,23 @@ in {
     inherit username;
     homeDirectory = "/home/${username}";
 
-    # shell
     #programs.zsh.enable = true;
 
-       # you do not need to change this if you're reading this in the future.
+    # you do not need to change this if you're reading this in the future.
     # don't ever change this after the first build.  don't ask questions.
     stateVersion = "24.05";
   }; # home
+  
+  # shell
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      ll = "ls -l";
+      la = "ls -laH";
+    };
+  };
 }

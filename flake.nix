@@ -1,6 +1,6 @@
 # flake.nix
 # Author:   Sai Vishnu // The Unconcerned Ape
-# Email:    me@svnu.me
+# Email:    saivishnu725@gmail.com
 
 {
   description = "configs";
@@ -26,15 +26,16 @@
         inherit system;
         config.allowUnfree = true;
       };
+      username = [ ./username.nix ];
     in {
       homeConfigurations = {
-        theunconcernedape  = home-manager.lib.homeManagerConfiguration {
+        currentuser  = home-manager.lib.homeManagerConfiguration {
           inherit pkgs; # unstable;
           modules = [ ./home.nix ];
           extraSpecialArgs = {
             unstable = unstable;
           };
-        }; # theunconcernedape
+        }; # currentuser
       }; # homeConfigurations
     }; # in
    
