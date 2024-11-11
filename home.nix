@@ -31,11 +31,10 @@ in {
     inherit username;
     homeDirectory = "/home/${username}";
 
-    #programs.zsh.enable = true;
-
     # you do not need to change this if you're reading this in the future.
     # don't ever change this after the first build.  don't ask questions.
     stateVersion = "24.05";
+    
   }; # home
   
   # shell
@@ -51,6 +50,10 @@ in {
   #  };
   #};
   
-  # zsh
+  # modules: zsh. neovim
   imports = [ ./modules/zsh/zsh.nix ./modules/neovim/nvim.nix ];
+
+  # neovim
+  home.file."./.config/nvim/init.lua".source = ./modules/neovim/init.lua;
+
 }
