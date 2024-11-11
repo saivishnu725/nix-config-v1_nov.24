@@ -1,6 +1,6 @@
 {
   # Symlink the Fastfetch configuration file
-  home.file.".config/fastfetch/config.json".source = ./modules/fastfetch/config.json;
+  home.file.".config/fastfetch/config.jsonc".source = ./config.jsonc;
 
   # Ensure Fastfetch is installed
   programs.fastfetch = {
