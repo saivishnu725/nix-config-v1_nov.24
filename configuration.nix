@@ -116,7 +116,8 @@
     gnumake
     home-manager
     neofetch
-    neovim
+    #neovim
+    neovim-unwrapped
     vim
     wget
   ];

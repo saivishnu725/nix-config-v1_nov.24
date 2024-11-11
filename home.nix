@@ -52,5 +52,5 @@ in {
   #};
   
   # zsh
-  imports = [ ./modules/zsh/zsh.nix ];
+  imports = [ ./modules/zsh/zsh.nix ./modules/neovim/nvim.nix ];
 }
