@@ -32,11 +32,7 @@
   };
 
   # Define custom functions
-  #programs.zsh.extraPlugins = [
-  programs.zsh.shellInit = [
-  {
-      name = "custom-functions";
-      src = ''
+   programs.zsh.envExtra = ''
         # Helper: Extract filename without extension
         onlyname() {
           filename=$1
@@ -87,7 +83,7 @@
         port-forw() {
           local_port=$1
           remote_port=$\{2:-$1}  # Default remote port same as local if not provided
-          ssh -N -L $\{local_port}:localhost:$\{remote_port} theunconcernedape@theunconcernedape.me -i $HOME/.ssh/vps -v
+          ssh -N -L ''${local_port}:localhost:''${remote_port} theunconcernedape@theunconcernedape.me -i $HOME/.ssh/vps -v
         }
 
         # File sender via rsync
@@ -100,7 +96,5 @@
           rsync -aPvh -e "ssh -i $HOME/.ssh/vps" "$@" "theunconcernedape@theunconcernedape.me:$destination"
         }
       '';
-    }
-  ];
 }
 
