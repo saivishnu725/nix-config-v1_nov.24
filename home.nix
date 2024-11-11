@@ -18,7 +18,7 @@ in {
       #gimp
       qbittorrent
       #spotify
-      tor-browser
+      #tor-browser
       vscode
       xclip
       zsh
