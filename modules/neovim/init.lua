@@ -1,3 +1,5 @@
+vim.opt.runtimepath:append(vim.fn.stdpath("config") .. "/lua")
+
 -- Main Neovim settings
 vim.opt.number = true                     -- Show line numbers
 vim.opt.relativenumber = true             -- Relative line numbers

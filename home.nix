@@ -54,6 +54,11 @@ in {
   imports = [ ./modules/zsh/zsh.nix ./modules/neovim/nvim.nix ];
 
   # neovim
-  home.file."./.config/nvim/init.lua".source = ./modules/neovim/init.lua;
+  home.file."./.config/nvim/init.lua".source            = ./modules/neovim/init.lua;
+  home.file."./.config/nvim/lua/appearance.lua".source  = ./modules/neovim/appearance.lua;
+  home.file."./.config/nvim/lua/extras.lua".source      = ./modules/neovim/extras.lua;
+  home.file."./.config/nvim/lua/keybindings.lua".source = ./modules/neovim/keybindings.lua;
+  home.file."./.config/nvim/lua/lsp.lua".source         = ./modules/neovim/lsp.lua;
+  home.file."./.config/nvim/lua/plugins.lua".source     = ./modules/neovim/plugins.lua;
 
 }

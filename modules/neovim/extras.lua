@@ -13,3 +13,5 @@ vim.g.mkdp_auto_start = 1
 -- Fast navigation
 require('hop').setup {}
 
+-- File explorer setup
+require('nvim-tree').setup {}
