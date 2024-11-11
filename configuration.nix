@@ -21,7 +21,7 @@
     rtl8821au
   ];
 
-  networking.hostName = "nixiyboi-v2"; # Define your hostname.
+  networking.hostName = "nixyboi-v2"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
