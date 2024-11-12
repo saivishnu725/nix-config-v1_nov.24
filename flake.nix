@@ -29,13 +29,25 @@
       username = [ ./username.nix ];
     in {
       homeConfigurations = {
-        currentuser  = home-manager.lib.homeManagerConfiguration {
+        
+        # desktop
+        desktop  = home-manager.lib.homeManagerConfiguration {
           inherit pkgs; # unstable;
-          modules = [ ./home.nix ];
+          modules = [ ./hosts/desktop.nix ];
           extraSpecialArgs = {
             unstable = unstable;
           };
-        }; # currentuser
+        }; # desktop
+
+        # server
+        server = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ ./hosts/server.nix ];
+          extraSpecialArgs = {
+            unstable = unstable;
+          };
+        }; # server
+
       }; # homeConfigurations
     }; # in
    
