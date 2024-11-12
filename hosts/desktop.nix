@@ -45,4 +45,8 @@ in {
   home.file."./.config/nvim/lua/lsp.lua".source         = ../modules/neovim/lsp.lua;
   home.file."./.config/nvim/lua/plugins.lua".source     = ../modules/neovim/plugins.lua;
 
+  ## kde
+  # dolphin
+  home.file."./.config/dolphinrc".source                = ../modules/kde/dolphin/dolphinrc;
+
 }
