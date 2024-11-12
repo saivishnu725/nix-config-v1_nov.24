@@ -35,7 +35,7 @@ in {
   }; # home
   
   # modules: zsh. neovim
-  imports = [ ./modules/zsh/zsh.nix ./modules/neovim/nvim.nix ./modules/fastfetch/fastfetch.nix ];
+  imports = [ ../modules/zsh/zsh.nix ../modules/neovim/nvim.nix ../modules/fastfetch/fastfetch.nix ];
 
   # neovim
   home.file."./.config/nvim/init.lua".source            = ../modules/neovim/init.lua;
