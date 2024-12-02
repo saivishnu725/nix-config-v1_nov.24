@@ -7,6 +7,7 @@ in {
 
     packages = with pkgs; [
       #hello
+      # docker ### moved to configuration.nix because it requires running on the system level
       (discord.override {
         withVencord = true;
       })
@@ -15,6 +16,9 @@ in {
       gedit
       gh
       #gimp
+      google-chrome
+      mpv
+      #python312Packages.pip
       qbittorrent
       #spotify
       #tor-browser
