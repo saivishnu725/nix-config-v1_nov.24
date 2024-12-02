@@ -6,6 +6,10 @@ desktop:
 server:
 	home-manager switch --flake .#server
 
+.PHONY: system
+system:
+	sudo nixos-rebuild switch
+
 .PHONY: update
 update:
 	nix flake update
