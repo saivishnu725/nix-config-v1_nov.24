@@ -11,6 +11,7 @@ in {
       (discord.override {
         withVencord = true;
       })
+      evince
       fastfetch
       firefox
       gedit
